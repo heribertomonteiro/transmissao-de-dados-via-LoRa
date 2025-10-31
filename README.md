@@ -1,4 +1,4 @@
-## Transmissão de Dados via LoRa — FPGA ColorLight i9 e BitDogLab
+## Transmissão de Dados via LoRa entre FPGA ColorLight i9 e BitDogLab
 
 Este projeto implementa um sistema de comunicação sem fio entre um SoC customizado rodando em uma FPGA ColorLight i9 e uma BitDogLab, utilizando módulos LoRa RFM96.
 
