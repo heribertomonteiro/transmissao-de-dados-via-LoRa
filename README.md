@@ -23,7 +23,7 @@ A BitDogLab atua como nó receptor, recebendo os dados e exibindo-os em um displ
 - **Firmware em C** responsável por:
   - Receber os pacotes LoRa enviados pela FPGA.
   - Decodificar os dados (temperatura e umidade).
-  - Atualizar periodicamente as leituras no OLED.
+  - Atualizar as leituras no OLED.
 
 ### Diagrama de Blocos do Sistema:
 
