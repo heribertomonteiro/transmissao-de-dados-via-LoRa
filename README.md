@@ -82,4 +82,8 @@ make
 sudo ~/../oss-cad-suite/bin/litex_term /dev/ttyACM0 --kernel main.bin
 ```
 
-8. Se depois de rodar o comando acima e não aperecer nada, aperta ENTER e após aparecer **litex>** ou **RUNTIME>** é preciso digitar **reboot** e apertar enter.
+9. Se depois de rodar o comando acima e não aperecer nada, aperta ENTER e após aparecer **litex>** ou **RUNTIME>** é preciso digitar **reboot** e apertar enter.
+
+
+## Link do video mostrando o funcionamento:
+[https://youtu.be/jLZwzpORT84?si=TMalt9ynCjvAYpzH](https://youtu.be/jLZwzpORT84?si=TMalt9ynCjvAYpzH)
