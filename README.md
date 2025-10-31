@@ -31,44 +31,52 @@ A BitDogLab atua como nó receptor, recebendo os dados e exibindo-os em um displ
 
 ### Fluxo de build e copilação (exemplo para Linux)
 
+# AVISO! CONECTAR O LoRa NO CN2 E SENSOR AHT10 NO J1 DO FPGA
+
 1. Fazer a clonagem do repositório e entrar na pasta
 
 ```powershell
 git clone https://github.com/heribertomonteiro/transmissao-de-dados-via-LoRa.git
 ```
 
-2. Instalar o openFPGALoader:
+2. Entrar na pasta do FPGA
+```powershell
+cd transmissao-de-dados-via-LoRa
+cd fpga
+```
+
+3. Instalar o openFPGALoader:
 
 ```powershell
 apt install openfpgaloader
 ```
 
-3. Entrar no ambiente de desenvolvimento OSS-CAD-SUITE
+4. Entrar no ambiente de desenvolvimento OSS-CAD-SUITE
 
 ```powershell
 source ~/../oss-cad-suite/environment
 ```
 
-4. Gerar/compilar o SoC e o bitstream (diretório raiz do projeto):
+5. Gerar/compilar o SoC e o bitstream (diretório raiz do projeto):
 
 ```powershell
 python3 litex/colorlight_i5.py --board i9 --revision 7.2 --build --cpu-type=picorv32 --ecppack-compress
 ```
 
-5. Programar a FPGA com o bitstream de configuração:
+6. Programar a FPGA com o bitstream de configuração:
 
 ```powershell
 sudo openFPGALoader -b colorlight-i5 build/colorlight_i5/gateware/colorlight_i5.bit
 ```
 
-6. Gerar `csr.h` (pelo build do LiteX) e compilar firmware (gera `main.bin`):
+7. Gerar `csr.h` (pelo build do LiteX) e compilar firmware (gera `main.bin`):
 
 ```powershell
 cd firmware
 make
 ```
 
-7. Conectar via terminal serial (litex_term) e carregar o kernel (`main.bin`):
+8. Conectar via terminal serial (litex_term) e carregar o kernel (`main.bin`):
 
 ```powershell
 sudo ~/../oss-cad-suite/bin/litex_term /dev/ttyACM0 --kernel main.bin
